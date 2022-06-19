@@ -1,0 +1,23 @@
+.submit{
+    display: flex;
+    background-color: var(--azul);
+    align-items: center;
+    justify-content: center ;
+    height: 2.5rem;
+    width: 15em;
+    border-radius: 20px;
+    position: absolute;
+    right: 51%;
+    top: 75%;
+    cursor: pointer;
+}
+
+.submit a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.submit:hover{
+    transition: .6s;
+    opacity: .8;
+}

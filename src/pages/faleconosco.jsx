@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Homep/Home.module.css'
 
-const Contatos = () => {
+const FaleConosco = () => {
     return(
         <>
         <Head>
@@ -12,10 +12,10 @@ const Contatos = () => {
         </Head>
         
             <div className={styles.container}>
-                <h1> Contatos </h1>
+                <h1> Fale Conosco </h1>
             </div>
         </>
     )
 }
 
-export default Contatos
+export default FaleConosco

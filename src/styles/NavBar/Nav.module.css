@@ -1,50 +1,119 @@
+/* NavBar Primária */
+
 .navbar{
     display: flex;
-    padding: 20px;
     background-color: var(--cor1);
-    list-style: none;
+    background-size: cover;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 100%;
-    height: 4.2rem;
+    height: 12vh;
+    padding: 20px;
+    font-family: var(--font-roboto);
 }
 
 .navbar a{
-    color: white;
-    text-decoration: none;
-    margin-right: 1rem;
+    color: var(--roza);
     transition: .3s;
-    font-size: 23px;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
 }
 
 .navbar a:hover{
-    color: #efdde7;
+    color: #a75682;
+    opacity: 0.8;
 }
 
-.navbar .image{ 
-   align-items: center;
-   justify-content: start;
+
+.logo{
+    align-self: left;
+    justify-self: center;  
 }
 
-.navbar2{
+.barra{
     display: flex;
-    background-color: var(--cinza);
+    width: 60vh;
+    height: 6vh;
+    margin-right: 2rem;
+    border-radius: 20px;
+    border-color: var(--roza);
+    border-style: solid;
+}
+
+.barra input{
+    width: 55vh;
+    margin-left: 10px;
+    background: none;       
+    border: none;
+    outline: none;
+    line-height: 20px;
+    color: #fff;
+}
+
+.lupa{
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    margin-right: 7px;
+
+}
+
+.favoritos{
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-right: -12rem;
+}
+
+.perfil{
+    padding-left: 5px;
+    margin-left: -12rem;
+    margin-top: 5px;
+}
+
+.carrinho{
+    margin-left: -12rem;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+/* NavBar Secundária */
+
+.navBar{
+    display: flex;
+    background-color: #878383;
+    height: 12vh;
+    width: 100%;
     padding: 10px;
-    list-style: none;
-    height: 3.5rem;
     align-items: center;
-    justify-content: space-around;
-    margin: auto;
+    justify-content: center;
+    font-family: var(--font-roboto);
 }
 
-.navbar2 a{
+.navBar ul{
+    display: flex;
+}
+
+.navBar a{
     color: var(--cor1);
-    text-decoration: none;
-    margin-right: 1rem;
     font-size: 20px;
+    margin-left: 15px;
+    padding: 5px;
     transition: .3s;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.navBar a:hover{
+    color: rgb(141, 141, 141);
+    opacity: 0.8;
 }
 
-.navbar2 a:hover{
-    color: rgb(57, 52, 52);
+/* Responsividade */
+
+.burguermenu{
+    display: none;
+    color: var(--roza);
+    cursor: pointer;
 }

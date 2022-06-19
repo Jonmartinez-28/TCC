@@ -2,17 +2,21 @@
   margin: 0;
   padding: 0;  
   box-sizing: border-box;
+  list-style: none;
 }
 
 :root{
   --cor-fundo : #E6DDD8;
-  --cor1 : rgba(0, 0, 0, 1);
+  --cor1 : #0d0d0d;
   --font-padrao : earthorbit;
   --font-roboto : roboto;
   --verde : rgba(189,249,1,255);
-  --rosa : rgba(255,0,106,255);
+  --verde2: rgb(50, 162, 42);
+  --roza2 : rgba(255,0,106,255);
   --azul : rgba(0,87,255,255);
-  --cinza : #a09898;
+  --cinza : #5a5959;
+  --roza: #f45495;
+  --navbar2: #e4e4e4;
 } 
 
 html{

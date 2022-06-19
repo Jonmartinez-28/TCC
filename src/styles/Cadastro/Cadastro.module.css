@@ -1,4 +1,4 @@
-/* Login */
+/* Cadastro */
 
 .menu{
     display: flex;
@@ -91,6 +91,8 @@
     width: 90%;
 }
 
+/* Formulário */
+
 .form{
     position: absolute;
     top: 45%;
@@ -109,65 +111,30 @@
     font-size: 15   px;
 }
 
-
-.esqueciSenha{
-    position: absolute;
-    right: 72%;
-    top: 65%;
-}
-
-.esqueciSenha a{
-    padding: 2px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.esqueciSenha a:hover{
-    color: #b1a8a8;
-    transition: .3s;
-}
-
-.esqueciEmail{
-    position: absolute;
-    right: 60%;  
-    top: 65%;    
-}
-
-.esqueciEmail a{
-    font-size: 20px;
-    text-decoration: none;
-    color: #fff;
-    padding: 2px;
-}
-
-.esqueciEmail a:hover{
-    color: #b1a8a8;
-    transition: .3s;
-}
-
 .submit{
     display: flex;
-    background-color: var(--azul);
+    height: 3rem;
+    width: 20rem;
     align-items: center;
-    justify-content: center ;
-    height: 2.5rem;
-    width: 15em;
+    justify-content: center;
+    background-color: var(--verde2);
     border-radius: 20px;
+    border-style: initial;
     position: absolute;
-    top: 75%;
-    right: 62%;
+    top: 87%;
+    right: 60.5%;
     cursor: pointer;
 }
 
 .submit a{
     color: #fff;
+    font-size: 25px;
     text-decoration: none;
 }
 
 .submit:hover{
     transition: .6s;
-    opacity: .8;
+    opacity: 0.8;
 }
 
 /* Imagens */
@@ -178,7 +145,7 @@
     left: 75%;
 }
 
-.fantasmaLogin {
+.fantasmaCadastro {
     position: absolute;
     left: 82.5%;
     bottom: -23%;

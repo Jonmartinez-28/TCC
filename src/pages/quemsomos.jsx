@@ -4,16 +4,15 @@ import styles from '../styles/Homep/Home.module.css'
 const QuemSomos = () => {
     return(
         <>
-            <Head>
+           <Head>
                 <meta charSet="UTF-8"></meta>
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge"></meta>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <title> Quem Somos </title>          
-            </Head>
+            </Head> 
 
             <div className={styles.container}>
                 <h1> Quem Somos </h1>
-                
             </div>
         </>
     )
