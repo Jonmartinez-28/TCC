@@ -1,0 +1,34 @@
+*{ 
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+
+:root{
+  --cor-fundo : #E6DDD8;
+  --cor1 : rgba(0, 0, 0, 1);
+  --font-padrao : earthorbit;
+  --font-roboto : roboto;
+  --verde : rgba(189,249,1,255);
+  --rosa : rgba(255,0,106,255);
+  --azul : rgba(0,87,255,255);
+  --cinza : #a09898;
+} 
+
+html{
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: earthorbit;
+  src: url("../../public/img/earthorbiter.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("../../public/img/Roboto-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+} 
