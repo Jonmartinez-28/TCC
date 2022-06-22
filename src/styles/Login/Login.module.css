@@ -109,6 +109,19 @@
     font-size: 15   px;
 }
 
+.SeePassword{
+    position: absolute;
+}
+
+.icon1{
+    height: 20vh;
+    width: 10vh;
+}
+
+.icon2{
+    height: 10vh;
+    width: 15vh;
+}
 
 .esqueciSenha{
     position: absolute;
@@ -144,30 +157,6 @@
 .esqueciEmail a:hover{
     color: #b1a8a8;
     transition: .3s;
-}
-
-.submit{
-    display: flex;
-    background-color: var(--azul);
-    align-items: center;
-    justify-content: center ;
-    height: 2.5rem;
-    width: 15em;
-    border-radius: 20px;
-    position: absolute;
-    top: 75%;
-    right: 62%;
-    cursor: pointer;
-}
-
-.submit a{
-    color: #fff;
-    text-decoration: none;
-}
-
-.submit:hover{
-    transition: .6s;
-    opacity: .8;
 }
 
 /* Imagens */

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Login/Login.module.css';
 import Link from 'next/link';
+import SubmitButton from '../components/Button/SubmitButton'
 
 const Login = () => {
     return(
@@ -44,9 +45,7 @@ const Login = () => {
                     </Link>
                 </div>
 
-                <div className={styles.submit} >
-                        <a> Entrar </a>
-                </div>
+                <SubmitButton />
 
                 <div className={styles.sustentabilidade}>
                     <Image src={"/img/Sustentabilidade.png"} height={"350vh"} width={"300vh"} alt={"Sustentabilidade"} />

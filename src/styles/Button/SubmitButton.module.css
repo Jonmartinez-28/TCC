@@ -5,16 +5,15 @@
     justify-content: center ;
     height: 2.5rem;
     width: 15em;
+    border: none;   
     border-radius: 20px;
     position: absolute;
-    right: 51%;
-    top: 75%;
-    cursor: pointer;
-}
-
-.submit a{
+    right: 61.5%;
+    cursor: pointer; 
     color: #fff;
     text-decoration: none;
+    font-size: 20px;
+
 }
 
 .submit:hover{

@@ -1,7 +1,7 @@
-import NextAuth from "next-auth"
-import SequelizeAdapter from "@next-auth/sequelize-adapter"
-import { Sequelize }  from "sequelize"
-import GoogleProvider from "next-auth/providers/google"
+import NextAuth from 'next-auth'
+import SequelizeAdapter from '@next-auth/sequelize-adapter'
+import { Sequelize }  from 'sequelize'
+import EmailProvider from 'next-auth/providers/email'
 
 const sequelize = new Sequelize({
     dialect: 'postgres',
@@ -15,30 +15,31 @@ const sequelize = new Sequelize({
         underscored: true,
     } 
   }
-);
-
+)
 
 export default NextAuth({   
   providers: [
-    GoogleProvider({
-        clientId: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        authorization: {
-            params: {
-              prompt: "consent",
-              access_type: "offline",
-              response_type: "code"
-            }
+      EmailProvider({
+        server: process.env.EMAIL_SERVER,
+        from: process.env.EMAIL_FROM,
+        maxAge: 24 * 60 * 60,
+        sendVerificationRequest({
+          identifier: email,
+          url,
+          provider: { server, from }
+        }){
+            <sendVerificationRequest />
         }
       }),
   ],
-
-  adapter: SequelizeAdapter(sequelize),
-
   session:{
     jwt:true,
   },
-
+  adapter: SequelizeAdapter(sequelize),
+  pages:{
+    signIn: "/login",
+    error: "/login"
+  },
   jwt:{
     secret: process.env.JWT_SECRET,
   },

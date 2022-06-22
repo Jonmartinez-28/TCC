@@ -1,9 +1,8 @@
+import { signIn } from 'next-auth/react'
 import styles from '../../styles/Button/SubmitButton.module.css'
 
-const Button = () => {
-    <form> 
-        <input className={styles.submit} type="submit" name="Entrar" id="Submit"></input>
-    </form>
+const SubmitButton = () => {
+    return <button className={styles.submit} id="Submit" onClick={() => signIn('email')}> Entrar </button>
 }
 
-export default Button;
+export default SubmitButton;
