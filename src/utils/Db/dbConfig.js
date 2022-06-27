@@ -1,4 +1,4 @@
-const dbConfig = {
+export default dbConfig= {
     dialect: 'postgres',
     host: process.env.DB_HOST,
     username: process.env.DB_USERNAME,
@@ -10,5 +10,3 @@ const dbConfig = {
         underscored: true,
     }
 }
-
-export default dbConfig;

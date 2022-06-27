@@ -1,22 +1,91 @@
+/* Geral */
+
 .footer{
+    display: flex;
     background-color: var(--cinza);
     color: #fff;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-}
-
-.footer_itens{
+    height: 35vh;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.footer_itens a{
+.footer h2{
+    margin-bottom: 1rem;
+}
+
+/* Logo */
+
+.logo{
+    position: absolute;
+    right: 74%;
+}
+
+/* Atendimento */
+
+.atendimento{
+    font-size: 20px;
+    margin-left: 5rem;
+    margin-top: 0;
+}
+
+.atendimento h2{
+    font-size: 2.2rem;
+    right: 55%;
+}
+
+.atendimento a{
+    display: block;
     text-decoration: none;
     color: var(--cor-fundo);
 }
 
-.footer_itens a:hover{
+.atendimento a:hover{
+    color: rgb(243, 233, 233);
+}
+
+/* Categorias */
+
+.categoria{
+    margin-left: 5rem;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.categoria h2{
+    font-size: 2.2rem;
+    right: 55%;
+}
+
+.categoria a{
+    display: block;
+    text-decoration: none;
+    color: var(--cor-fundo);
+}
+
+.categoria a:hover{
+    color: rgb(243, 233, 233);
+}
+
+/* Institucional */
+
+.institucional{
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.institucional h2{
+    font-size: 2.2rem;
+    right: 55%;
+}
+
+.institucional a{
+    display: block;
+    text-decoration: none;
+    color: var(--cor-fundo);
+}
+
+.institucional a:hover{
     color: rgb(243, 233, 233);
 }

@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Login/Login.module.css';
 import Link from 'next/link';
-import SubmitButton from '../components/Button/SubmitButton'
+import LoginButton from '../components/Button/LoginButton';
+import { Formik, Field, Form} from 'formik'
 
 const Login = () => {
     return(
@@ -27,11 +28,18 @@ const Login = () => {
                     </Link>
                 </div>
 
-                <form action="" method='POST' className={styles.form}>
-                    <input type="email" name="email" placeholder="E-mail" id="email"></input>
-                    <input type="password" 
-                    name="password" placeholder="Senha" id="senha"></input>
-                </form>
+                <Formik 
+                    initialValues={{
+                        email: '',
+                        password: '',
+                    }}
+                    render={( values, err) => (
+                        <Form action="" method='POST' className={styles.form}>
+                            <Field type="email" name="email" placeholder="E-mail"></Field>
+                            <Field type="password" name="password" placeholder="Senha"></Field>
+                        </Form>
+                    )} 
+                />
 
                 <div className={styles.esqueciSenha}>
                     <Link href={"#"}>
@@ -45,7 +53,7 @@ const Login = () => {
                     </Link>
                 </div>
 
-                <SubmitButton />
+                <LoginButton />
 
                 <div className={styles.sustentabilidade}>
                     <Image src={"/img/Sustentabilidade.png"} height={"350vh"} width={"300vh"} alt={"Sustentabilidade"} />

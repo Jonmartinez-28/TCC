@@ -2,10 +2,11 @@ import styles from '../../styles/NavBar/Nav.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AiOutlineMenu } from 'react-icons/ai'
-import { signOut , useSession } from 'next-auth/react'
+import { useSession, signOut } from 'next-auth/react'
 
 const NavBar = () => {
-    const session = useSession;
+    const { data: session } = useSession;
+    const handleSignOut = () => signOut({ redirect: false })
 
     return (
         <>
@@ -13,14 +14,14 @@ const NavBar = () => {
 
                 <div className={styles.logo}>
                     <Link href="/">
-                        <a> <Image src="/img/Logo.png" width={"350vh"} height={"90vh"} alt="Logo do Site"/> </a>
+                        <a> <Image src="/img/Logo.png" height={"90vh"} width={"350vh"} alt="Logo do Site"/> </a>
                     </Link>
                 </div>
 
                 <div  className={styles.barra}>
                   <input type="text" name="Pesquisar" placeholder="Pesquisar" id="barra"></input>
                   <div className={styles.lupa}>
-                         <Image src="/img/Lupa.png" width={"30vh"} height={"25vh"} alt="Lupa de Pesquisa" />
+                         <Image src="/img/Lupa.png" height={"10vh"} width={"40vh"} alt="Lupa de Pesquisa" />
                   </div>
                 </div>
 
@@ -29,16 +30,20 @@ const NavBar = () => {
                 </div>
 
                 <div className={styles.favoritos}>
-                    <Image src="/img/Favoritos.png" width={"30vh"} height={"25vh"} alt="Produtos Favoritos"/>
+                    <Image src="/img/Favoritos.png" height={"25vh"} width={"30vh"} alt="Produtos Favoritos"/>
                 </div>
-   
-                    <div className={styles.perfil}>
-                        <Image onClick={() => signOut()} src="/img/Perfil.png" width={"32vh"} height={"28vh"} alt="Minha Conta" />
-                    </div>
-                    
+                
+                {!session ? (
                     <Link href={"/login"}>
                         <a> Login </a>
                     </Link>
+                ):(
+                    <div className={styles.perfil}>
+                        <Image src="/img/Perfil.png" height={"28vh"} width={"32vh"} alt="Minha Conta" />
+                    </div>
+
+                )}
+                    
 
                 <div className={styles.carrinho}>
                     <Image src="/img/carrinho.png" width={"30vh"} height={"25vh"} alt="Carrinho da Página" />

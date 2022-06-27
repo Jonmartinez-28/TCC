@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Cadastro/Cadastro.module.css'
 import Link from 'next/link'
+import CadastroButton from '../components/Button/CadastroButton'
+import CadastroUsuario from '../pages/api/CadastroUsuario'
 
 const Cadastro = () => {
     return(
@@ -12,6 +14,7 @@ const Cadastro = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <title> Cadastro </title>          
             </Head>
+
             <div className={styles.menu}>
                 <div className={styles.mudarpage}>
                     <Link href={"/login"}>
@@ -27,22 +30,22 @@ const Cadastro = () => {
 
                 <form action="" method='POST' className={styles.form}>
 
-                    <input type="email" name="Email" placeholder="Email" id="email"></input>
+                    <input type="text" name="Nome" placeholder="Digite seu Nome Completo"></input>
 
-                    <input type="email" name="Repetir Email" placeholder="Repita o Email" id="RepitaEmail" ></input>
+                    <input type="text" name="Repetir Nome" placeholder="Repita seu Nome"></input>
 
-                    <input type="password" name="password" 
-                    placeholder="Senha" id="senha"></input> 
+                    <input type="email" name="Email" placeholder="Digite seu Email"></input>
+
+                    <input type="email" name="Repetir Email" placeholder="Repita o Email"></input>
+
+                    <input type="password" name="Senha" placeholder="Senha"></input> 
 
                     <input type="password" name="Repitir Senha" placeholder="Repita a Senha" id-="RepitaSenha"></input>
                     
                 </form>
-
-                <div className={styles.submit}>
-                    <Link href={"/"}>
-                        <a> Cadastrar </a>
-                    </Link>
-                </div>
+                <Link href={"/"}>
+                    <CadastroButton onClick={CadastroUsuario()} />
+                </Link>
 
                 <div className={styles.sustentabilidade}>
                     <Image src={"/img/Sustentabilidade.png"} height={"350vh"} width={"300vh"} alt={"Sustentabilidade"} />

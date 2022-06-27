@@ -1,0 +1,21 @@
+.cadastro{
+    display: flex;
+    height: 3rem;
+    width: 20rem;
+    position: absolute;
+    top: 100%;
+    right: 60%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde2);
+    border-radius: 20px;
+    border-style: initial;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.cadastro:hover{
+    transition: .6s;
+}
