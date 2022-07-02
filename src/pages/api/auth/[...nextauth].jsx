@@ -1,12 +1,22 @@
 import NextAuth from 'next-auth'
 import EmailProvider from 'next-auth/providers/email'
-import Sequelize, { DataTypes } from 'sequelize'
+import Sequelize from 'sequelize'
 import SequelizeAdapter, { models } from '@next-auth/sequelize-adapter'
-import dbConfig from '../../../utils/Db/dbConfig'
-
 
 // Conexão com o Banco de Dados
-const sequelize = new Sequelize(dbConfig);
+const sequelize = new Sequelize({
+    database: process.env.DB_NAME,
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: 'postgres',
+    define: {
+        timestamps: true,
+        underscored: true,
+    }
+});
+
 
 export default NextAuth({   
   providers: [
@@ -29,30 +39,20 @@ export default NextAuth({
   ],
 
   // Configuração de Sessões
-  session:{
-    strategy: "database",
+  session:{ 
+    strategy: 'database',
     maxAge: 30 * 24 * 60 * 60,
     updateAge: 24 * 60 * 60,
+
   },
 
   // Configuração do Adapter
-  adapter: SequelizeAdapter(sequelize, {
-    models:{
-      User: sequelize.define("uscsuario", {
-        ...models.User,
-        nome_usuario: DataTypes.INTEGER,
-        email_usuario: DataTypes.STRING,
-        senha_usuario: DataTypes.STRING,
-        status_usuario: DataTypes.STRING, 
-      })
-    }
-  }),
+  adapter: SequelizeAdapter(sequelize),
 
   // Configuração das Páginas 
   pages:{
     signIn: "/login",
     error: "/login",
-    newUser:"/",
-    verifyRequest: "/utils/NodeMailer",
   },
+  secret: process.env.NEXT_AUTH_SECRET,
 })  

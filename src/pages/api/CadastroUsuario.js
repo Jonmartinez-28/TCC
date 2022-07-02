@@ -1,13 +1,13 @@
+import User from '../../Models/User'
 
-
-const CadastroUsuario = async (req, res) => {
-    const { Nome, Email, Senha } = req.params;
-    const usuario = await User.create({
-        Nome, Email, Senha
+const getServerSideProps = async (e) => {
+    e.preventDefault();
+    const { nome_usuario, email_usuario, senha_usuario} = e.target.value;
+    const usuario = await User.create({ 
+        nome_usuario, email_usuario, senha_usuario 
     });
 
-    return res.json(usuario);
+    return usuario;      
 }
 
-
-export default CadastroUsuario;
+export default getServerSideProps;

@@ -20,9 +20,11 @@ const NavBar = () => {
 
                 <div  className={styles.barra}>
                   <input type="text" name="Pesquisar" placeholder="Pesquisar" id="barra"></input>
-                  <div className={styles.lupa}>
-                         <Image src="/img/Lupa.png" height={"10vh"} width={"40vh"} alt="Lupa de Pesquisa" />
-                  </div>
+                  <label htmlFor="barra">
+                    <div className={styles.lupa}>
+                        <Image src="/img/Lupa.png" height={"10vh"} width={"40vh"} alt="Lupa de Pesquisa" />
+                    </div>
+                  </label>
                 </div>
 
                 <div className={styles.burguermenu}>
@@ -30,28 +32,28 @@ const NavBar = () => {
                 </div>
 
                 <div className={styles.favoritos}>
-                    <Image src="/img/Favoritos.png" height={"25vh"} width={"30vh"} alt="Produtos Favoritos"/>
+                    <Image src="/img/Favoritos.png" height={"35vh"} width={"38vh"} alt="Produtos Favoritos"/>
                 </div>
                 
                 {!session ? (
                     <Link href={"/login"}>
-                        <a> Login </a>
+                        <a className={styles.login}> Login </a>
                     </Link>
                 ):(
                     <div className={styles.perfil}>
-                        <Image src="/img/Perfil.png" height={"28vh"} width={"32vh"} alt="Minha Conta" />
+                        <Image src="/img/Perfil.png" height={"35vh"} width={"38vh"} alt="Minha Conta" />
                     </div>
 
                 )}
                     
 
                 <div className={styles.carrinho}>
-                    <Image src="/img/carrinho.png" width={"30vh"} height={"25vh"} alt="Carrinho da Página" />
+                    <Image src="/img/carrinho.png" width={"40vh"} height={"35vh"} alt="Carrinho da Página" />
                 </div>
                 
             </div>
 
-            <div className={styles.navBar}>
+            <div className={styles.nav2}>
                 <ul> 
                     <li>
                         <Link href="/produtos">
@@ -60,11 +62,16 @@ const NavBar = () => {
                     </li>
 
                     <li>
-                        <Link href="/quemsomos">
-                            <a> Quem Somos </a>
+                        <Link href="/ferramentas">
+                            <a> Ferramentas </a>
                         </Link>
                     </li>
 
+                    <li>
+                        <Link href="/cursos">
+                            <a> Cursos </a>
+                        </Link>
+                    </li>     
                     <li>
                         <Link href="/faleconosco">
                             <a> Fale Conosco </a>

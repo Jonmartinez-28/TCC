@@ -1,30 +1,30 @@
 *{ 
-  margin: 0;
-  padding: 0;  
+  color: inherit;
   box-sizing: border-box;
   list-style: none;
-  font-style: var(--font-padrao);
 }
 
 :root{
   --cor-fundo : #E6DDD8;
-  --cor1 : #121212;
-  --font-padrao : earthorbit;
+  --cor1 : #121212; 
   --verde : rgba(189,249,1,255);
   --verde2: rgb(50, 162, 42);
   --roza2 : rgba(255,0,106,255);
   --azul : rgba(0,87,255,255);
-  --cinza : #8d8383;
+  --cinza : #807878;
   --roza: #f45495;
 } 
 
-html{
+html, body{
+  margin: 0;
+  padding: 0;  
   scroll-behavior: smooth;
+  font-family: Lato;
 }
 
 @font-face {
-  font-family: earthorbit;
-  src: url("../../public/img/earthorbiter.ttf");
+  font-family: Lato;
+  src: url("../../public/Fonts/Lato-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }

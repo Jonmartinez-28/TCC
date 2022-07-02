@@ -1,5 +1,4 @@
 import nodemailer from 'nodemailer'
-import { sendMail } from '@sendgrid/mail'
 
 const sendVerificationRequest = async ({
     identifier: email,

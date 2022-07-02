@@ -3,16 +3,16 @@
     background-color: var(--azul);
     align-items: center;
     justify-content: center ;
-    height: 2.5rem;
+    height: 2.8rem;
     width: 15em;
     border: none;   
     border-radius: 1.25rem;
     position: absolute;
-    right: 61.5%;
+    right: 60%;
     cursor: pointer; 
     color: #fff;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
 
 }
 

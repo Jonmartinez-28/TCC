@@ -22,13 +22,13 @@
 
 .mudarpage a{
     color: #ffff;
-    font-size: 25px;
+    font-size: 2.2rem;
     padding: 10px;
     margin-top: 3.5rem;
     margin-right: 2rem;
     text-decoration: none;
     position: relative;
-    right: 350%;
+    right: 315%;
 }
 
 .mudarpage a:hover{
@@ -62,12 +62,12 @@
 
 .mudarpage2 a{
     color: #ffff;
-    font-size: 25px;
+    font-size: 2.2rem;
     padding: 10px;
     margin-top: 3.5rem;
     text-decoration: none;
     position: relative; 
-    right: 210%;
+    right: 160%;
 }
 
 .mudarpage2 a:hover{
@@ -105,7 +105,7 @@
     color: var(--cor1);
     padding: 20px;
     margin-bottom: 12px;
-    font-size: 15px;
+    font-size: 1.2rem;
 }
 
 .SeePassword{
@@ -124,13 +124,13 @@
 
 .esqueciSenha{
     position: absolute;
-    right: 72%;
+    right: 70%;
     top: 65%;
 }
 
 .esqueciSenha a{
     padding: 2px;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #fff;
 }
@@ -142,12 +142,12 @@
 
 .esqueciEmail{
     position: absolute;
-    right: 60%;  
+    right: 58%;  
     top: 65%;    
 }
 
 .esqueciEmail a{
-    font-size: 20px;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #fff;
     padding: 2px;

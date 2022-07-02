@@ -2,8 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Cadastro/Cadastro.module.css'
 import Link from 'next/link'
-import CadastroButton from '../components/Button/CadastroButton'
-import CadastroUsuario from '../pages/api/CadastroUsuario'
+import CadastroForm from '../components/Form/CadastroForm'
 
 const Cadastro = () => {
     return(
@@ -24,28 +23,11 @@ const Cadastro = () => {
 
                 <div className={styles.mudarpage2}>
                     <Link href={"/cadastro"}>
-                            <a> Cadastro </a>
+                        <a> Cadastro </a>
                     </Link>
                 </div>
 
-                <form action="" method='POST' className={styles.form}>
-
-                    <input type="text" name="Nome" placeholder="Digite seu Nome Completo"></input>
-
-                    <input type="text" name="Repetir Nome" placeholder="Repita seu Nome"></input>
-
-                    <input type="email" name="Email" placeholder="Digite seu Email"></input>
-
-                    <input type="email" name="Repetir Email" placeholder="Repita o Email"></input>
-
-                    <input type="password" name="Senha" placeholder="Senha"></input> 
-
-                    <input type="password" name="Repitir Senha" placeholder="Repita a Senha" id-="RepitaSenha"></input>
-                    
-                </form>
-                <Link href={"/"}>
-                    <CadastroButton onClick={CadastroUsuario()} />
-                </Link>
+                <CadastroForm />
 
                 <div className={styles.sustentabilidade}>
                     <Image src={"/img/Sustentabilidade.png"} height={"350vh"} width={"300vh"} alt={"Sustentabilidade"} />

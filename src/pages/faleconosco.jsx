@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Homep/Home.module.css'
+import { Formik, Form, Field } from 'formik'
 
 const FaleConosco = () => {
     return(
@@ -14,6 +15,19 @@ const FaleConosco = () => {
             <div className={styles.container}>
                 <h1> Fale Conosco </h1>
             </div>
+
+
+            <Formik>
+                {() => (
+                    <Form className={styles.form} method='post'>
+                        <Field type/>
+                        <Field />
+                        <Field/>
+                    </Form>
+                )}
+            </Formik>
+
+
         </>
     )
 }
