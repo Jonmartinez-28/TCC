@@ -1,6 +1,6 @@
 import { useFormik ,Formik, Form, Field} from 'formik'
-import getServerSideProps from '../../pages/api/CadastroUsuario'
 import styles from '../../styles/Cadastro/Cadastro.module.css'
+import getServerSideProps from '../../pages/api/CadastroUsuario'
 
 
 const initialValues = {
@@ -9,11 +9,7 @@ const initialValues = {
     senha: '',
 }
 
-const onSubmit = values => {
-    console.log("Form data" + values)
-}
-
-const validate = values => {
+const validate = (values) => {
     let errors = {};
 
     if(!values.name){
@@ -28,14 +24,13 @@ const validate = values => {
         errors.name = "Senha Requirida"
     }
     
-    return errors
+    return errors;
 }
 
 const CadastroForm = () =>{
 
     const formik = useFormik({
         initialValues,
-        onSubmit,
         validate,
     });
     
@@ -43,7 +38,7 @@ const CadastroForm = () =>{
     return(
         <>
             <Formik>
-
+                
                 {() => (
                     <Form className={styles.form} onSubmit={getServerSideProps}>
 
@@ -59,8 +54,8 @@ const CadastroForm = () =>{
                         <Field 
                             type="email" 
                             mame="email" 
-                            placeholder="Digite seu Email" 
-                            id="email" 
+                            placeholder="Digite seu
+                            Email"                           id="email" 
                             onChange={formik.handleChange} 
                             value={formik.values.email}
                         />

@@ -13,10 +13,7 @@ const sequelize = new Sequelize({
     }
 });
 
-const User = sequelize.define("usuarios",{
-    nome_usuario: {
-        type: Sequelize.STRING,  
-    },
+const UserConfig = sequelize.define("usuarios",{
 
     email_usuario: {
             type: Sequelize.STRING,
@@ -25,6 +22,9 @@ const User = sequelize.define("usuarios",{
     senha_usuario:{    
         type:Sequelize.STRING,
     },
+    nome_usuario: {
+        type: Sequelize.STRING,  
+    },
 });
 
-export default User;
+export default UserConfig;
